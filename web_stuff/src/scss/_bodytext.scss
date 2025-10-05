@@ -1,0 +1,7 @@
+@use "../utils/mixins" as *;
+
+body {
+  @include flexcol;
+  background-color: red;
+  color: white;
+}
