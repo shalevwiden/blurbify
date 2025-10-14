@@ -12,8 +12,16 @@
     font-variation-settings: "FILL" 0, "wght" 700, "GRAD" 0, "opsz" 24;
     font-size: 27px;
   }
+
+  .bookmark {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 40;
+    font-size: 37px;
+
+    margin-top: 4px;
+  }
   .share {
     font-variation-settings: "FILL" 0, "wght" 500, "GRAD" 0, "opsz" 20;
-    font-size: 35px;
+    font-size: 37px;
+    margin-top: -1px;
   }
 }

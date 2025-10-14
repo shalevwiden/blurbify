@@ -11,9 +11,15 @@
   font-variation-settings: "FILL" 0, "wght" 700, "GRAD" 0, "opsz" 24;
   font-size: 27px;
 }
+.iconsdiv .bookmark {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 40;
+  font-size: 37px;
+  margin-top: 4px;
+}
 .iconsdiv .share {
   font-variation-settings: "FILL" 0, "wght" 500, "GRAD" 0, "opsz" 20;
-  font-size: 35px;
+  font-size: 37px;
+  margin-top: -1px;
 }
 
 body {
@@ -29,6 +35,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   gap: 10px;
+  background-color: #055c22;
 }
 body .sitecontainer {
   display: flex;
@@ -45,8 +52,8 @@ body .sitecontainer .blurbifydiv {
   height: auto;
   padding: 30px;
   padding-bottom: 100px;
-  border: 4px solid #3d2cf0;
-  border-radius: 26px;
+  border: 10px solid #09a929;
+  border-radius: 30px;
   width: 900px;
   background-color: white;
 }
@@ -66,7 +73,7 @@ body .sitecontainer .blurbifydiv div#pfp_and_username {
 body .sitecontainer .blurbifydiv div#pfp_and_username .pfpdiv {
   width: 100px;
   aspect-ratio: 1/1;
-  border: 3px solid black;
+  border: 0px solid black;
   border-radius: 50%;
   overflow: hidden;
   z-index: 1;
@@ -112,6 +119,16 @@ body .sitecontainer .blurbifydiv div#pfp_and_username .usernamediv div.align_the
 body .sitecontainer .blurbifydiv div#pfp_and_username .usernamediv div.align_them_div #name {
   font-weight: bold;
   font-size: 25px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  gap: 2px;
+}
+body .sitecontainer .blurbifydiv div#pfp_and_username .usernamediv div.align_them_div #name img#verified {
+  width: 21px;
+  aspect-ratio: 1/1;
 }
 body .sitecontainer .blurbifydiv div#pfp_and_username .usernamediv div.align_them_div #username {
   color: grey;
@@ -140,10 +157,10 @@ body .sitecontainer .blurbifydiv div.iconsdiv {
   align-items: center;
   justify-content: center;
   gap: 20px;
-  border: 4px solid rgb(255, 0, 0);
+  border: 4px solid transparent;
   border-radius: 26px;
   justify-content: space-between;
-  margin-top: 30px;
+  margin-top: 15px;
   height: 50px;
   margin-left: 120px;
 }
@@ -156,12 +173,20 @@ body .sitecontainer .blurbifydiv div.iconsdiv .statsarea {
   align-items: center;
   justify-content: center;
   gap: 20px;
-  border: 1px solid black;
   gap: 5px;
 }
 body .sitecontainer .blurbifydiv div.iconsdiv .statsarea #count {
   font-size: 15px;
   margin-top: 5px;
+}
+body .sitecontainer .blurbifydiv div.iconsdiv .righticons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  gap: 3px;
+  margin-right: 30px;
 }
 
 @page {
