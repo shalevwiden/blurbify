@@ -1,9 +1,9 @@
 @use "../utils/mixins" as *;
 @use "../utils/icons" as *;
 
-$bodybg: #055c22ff;
+$bodybg: #b9ecffff;
 $tweetbackgroundcolor: #ffffffff;
-$tweet_border_color: #09a929ff;
+$tweet_border_color: #5cc1fcff;
 $usernamegap: 10px;
 $pfp_size: 100px;
 $blurbify_width: 900px;
@@ -120,11 +120,13 @@ body {
 
         margin-top: -67px;
         font-size: 20px;
+        padding-bottom: 0px;
+        padding-top: 10px;
       }
       section#imagesection {
         padding: 10px;
 
-        margin-left: $usernamegap + $pfp_size + 10px;
+        margin-left: $usernamegap + $pfp_size + 0px;
 
         // this uses my mixin and if else logic
         @if $debugborders {
@@ -132,10 +134,21 @@ body {
         } @else {
           @include border(transparent);
         }
-        @include border(rgb(74, 192, 228));
+        // @include border(rgb(74, 192, 228));
 
         width: 80%;
-        height: 300px;
+        height: auto;
+
+        img#tweetimage {
+          width: 100%;
+          height: auto;
+          border-radius: 25px;
+        }
+        video {
+          width: 100%;
+          height: auto;
+          border-radius: 25px;
+        }
       }
       div.iconsdiv {
         @include flexrow;
