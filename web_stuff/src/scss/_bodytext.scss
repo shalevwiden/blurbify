@@ -97,13 +97,13 @@ body {
         padding: 30px;
         padding-left: $usernamegap + $pfp_size + 18px;
 
-        margin-top: -58px;
+        margin-top: -67px;
         font-size: 20px;
       }
       section#imagesection {
         padding: 10px;
 
-        padding-left: $usernamegap + $pfp_size;
+        margin-left: $usernamegap + $pfp_size + 10px;
 
         // this uses my mixin and if else logic
         @if $debugborders {
@@ -111,8 +111,24 @@ body {
         } @else {
           @include border(transparent);
         }
+        @include border(rgb(74, 192, 228));
+
         width: 80%;
         height: 300px;
+      }
+      div.iconsdiv {
+        @include flexrow;
+        @include border(rgb(255, 0, 0));
+        justify-content: space-between;
+
+        margin-top: 30px;
+        height: 50px;
+
+        margin-left: $usernamegap + $pfp_size + 10px;
+
+        i {
+          font-size: 25px;
+        }
       }
     }
   }
