@@ -1,3 +1,14 @@
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24; /* optical size */
+  font-size: 36px;
+  transition: all 0.3s ease;
+}
+
+.iconsdiv .fa-heart {
+  font-variation-settings: "FILL" 0, "wght" 700, "GRAD" 0, "opsz" 24;
+  color: #f10000;
+}
+
 body {
   scroll-behavior: smooth;
   display: flex;
