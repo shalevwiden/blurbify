@@ -26,28 +26,82 @@ body .sitecontainer {
 body .sitecontainer .blurbifydiv {
   height: auto;
   padding: 30px;
+  padding-bottom: 100px;
   border: 4px solid #3d2cf0;
   border-radius: 26px;
-  width: 600px;
+  width: 900px;
+  background-color: white;
 }
-body .sitecontainer .blurbifydiv .pfpdiv {
-  width: 40px;
-  height: 40px;
-  border: 3px solid black;
-  border-radius: 50%;
-}
-body .sitecontainer .blurbifydiv .usernamediv {
-  border: 4px solid #f02c7e;
-  border-radius: 26px;
-  width: auto;
-  padding: 0 20px;
+body .sitecontainer .blurbifydiv div#pfp_and_username {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 20px;
+  align-items: flex-start;
+  border: 3px solid transparent;
+  justify-content: flex-start;
+  padding-right: 20px;
+  height: 100px;
+  gap: 1px;
+}
+body .sitecontainer .blurbifydiv div#pfp_and_username .pfpdiv {
+  width: 100px;
+  aspect-ratio: 1/1;
+  border: 3px solid black;
+  border-radius: 50%;
+}
+body .sitecontainer .blurbifydiv div#pfp_and_username .usernamediv {
+  height: 100%;
+  width: 400px;
+  border: 4px solid transparent;
+  border-radius: 26px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+body .sitecontainer .blurbifydiv div#pfp_and_username .usernamediv div.align_them_div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  justify-content: flex-start;
+  align-items: flex-end;
+  border: 4px solid pink;
+  border-radius: 26px;
+  width: 100%;
+  height: 40%;
+  padding: 0 11px;
   -moz-column-gap: 10px;
        column-gap: 10px;
+}
+body .sitecontainer .blurbifydiv div#pfp_and_username .usernamediv div.align_them_div #name {
+  font-weight: bold;
+  font-size: 25px;
+}
+body .sitecontainer .blurbifydiv div#pfp_and_username .usernamediv div.align_them_div #username {
+  color: grey;
+  font-size: 20px;
+  margin-bottom: 2px;
+}
+body .sitecontainer .blurbifydiv div.textcontent {
+  padding: 30px;
+  padding-left: 128px;
+  margin-top: -58px;
+  font-size: 20px;
+}
+body .sitecontainer .blurbifydiv section#imagesection {
+  padding: 10px;
+  padding-left: 110px;
+  border: 4px solid purple;
+  border-radius: 26px;
+  width: 80%;
+  height: 300px;
 }
 
 @page {
