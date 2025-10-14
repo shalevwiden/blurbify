@@ -5,8 +5,15 @@
 }
 
 .iconsdiv .fa-heart {
-  font-variation-settings: "FILL" 0, "wght" 700, "GRAD" 0, "opsz" 24;
   color: #f10000;
+}
+.iconsdiv .stats {
+  font-variation-settings: "FILL" 0, "wght" 700, "GRAD" 0, "opsz" 24;
+  font-size: 27px;
+}
+.iconsdiv .share {
+  font-variation-settings: "FILL" 0, "wght" 500, "GRAD" 0, "opsz" 20;
+  font-size: 35px;
 }
 
 body {
@@ -61,6 +68,17 @@ body .sitecontainer .blurbifydiv div#pfp_and_username .pfpdiv {
   aspect-ratio: 1/1;
   border: 3px solid black;
   border-radius: 50%;
+  overflow: hidden;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+body .sitecontainer .blurbifydiv div#pfp_and_username .pfpdiv img {
+  width: 135%; /* scale image to parent width */
+  aspect-ratio: 1/1;
 }
 body .sitecontainer .blurbifydiv div#pfp_and_username .usernamediv {
   height: 100%;
@@ -131,6 +149,19 @@ body .sitecontainer .blurbifydiv div.iconsdiv {
 }
 body .sitecontainer .blurbifydiv div.iconsdiv i {
   font-size: 25px;
+}
+body .sitecontainer .blurbifydiv div.iconsdiv .statsarea {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  border: 1px solid black;
+  gap: 5px;
+}
+body .sitecontainer .blurbifydiv div.iconsdiv .statsarea #count {
+  font-size: 15px;
+  margin-top: 5px;
 }
 
 @page {

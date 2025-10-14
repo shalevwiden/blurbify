@@ -49,6 +49,14 @@ body {
           aspect-ratio: 1 / 1;
           border: 3px solid black;
           border-radius: 50%;
+
+          overflow: hidden;
+          z-index: 1;
+          @include flexcol;
+          img {
+            width: 135%; /* scale image to parent width */
+            aspect-ratio: 1 / 1;
+          }
         }
         .usernamediv {
           height: 100%;
@@ -130,6 +138,16 @@ body {
         i {
           font-size: 25px;
         }
+        .statsarea {
+          @include flexrow;
+          border: 1px solid black;
+          gap: 5px;
+
+          #count {
+            font-size: 15px;
+            margin-top: 5px;
+          }
+        }
       }
     }
   }
@@ -138,3 +156,5 @@ body {
   size: A4;
   margin: 0;
 }
+
+$pfp_size: 100px; // define your profile size
