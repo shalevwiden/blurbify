@@ -2,6 +2,28 @@
 
 body {
   @include flexcol;
-  background-color: red;
+  background-color: rgb(255, 255, 255);
   color: white;
+
+  // .sitecontainer {
+  //   background-color: red;
+  //   border-radius: 20px;
+  //   border: 3px solid blue;
+
+  //   width: 300px;
+  //   height: 300px;
+  // }
+
+  .sitecontainer {
+    width: 595pt; // A4 width in points
+    height: 842pt; // A4 height in points
+    background-color: red;
+    border-radius: 20px;
+    border: 3px solid blue;
+  }
+}
+@page {
+  size: A4;
+  margin: 0;
+  background: red;
 }

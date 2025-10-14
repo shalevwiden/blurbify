@@ -1,14 +1,4 @@
-
-
-# import imgkit
-
-
-# def render_html():
-#     with open("htmlfiles/bodyhtml.html", "r", encoding="utf-8") as bodyfile:
-#         body_html = bodyfile.read()
-#     imgkit.from_string(body_html, "imagetemplates/from_string.png")
-
-# render_html()
+\
 import weasyprint
 import pypdfium2 as pdfium
 from PIL import Image
