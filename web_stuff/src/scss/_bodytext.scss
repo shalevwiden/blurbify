@@ -1,29 +1,38 @@
 @use "../utils/mixins" as *;
 
 body {
-  @include flexcol;
-  background-color: rgb(255, 255, 255);
-  color: white;
-
-  // .sitecontainer {
-  //   background-color: red;
-  //   border-radius: 20px;
-  //   border: 3px solid blue;
-
-  //   width: 300px;
-  //   height: 300px;
-  // }
+  @include bodyStyling;
 
   .sitecontainer {
-    width: 595pt; // A4 width in points
-    height: 842pt; // A4 height in points
-    background-color: red;
-    border-radius: 20px;
-    border: 3px solid blue;
+    @include flexcol();
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    border: 3px solid black;
+
+    .blurbifydiv {
+      height: auto;
+      padding: 30px;
+      @include border(#3d2cf0ff);
+      width: 600px;
+
+      .pfpdiv {
+        width: 40px;
+        height: 40px;
+        border: 3px solid black;
+        border-radius: 50%;
+      }
+      .usernamediv {
+        @include border(#f02c7eff);
+        width: auto;
+        padding: 0 20px;
+        @include flexrow;
+        column-gap: 10px;
+      }
+    }
   }
 }
 @page {
   size: A4;
   margin: 0;
-  background: red;
 }
