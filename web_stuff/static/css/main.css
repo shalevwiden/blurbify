@@ -88,11 +88,16 @@
 
 .flying_class {
   display: block;
+  visibility: visible !important;
   animation: flyingobject 5s normal linear infinite;
 }
 
 .spin_class {
   animation: spin_lin 5s ease infinite;
+}
+
+:root {
+  --border-thickness: 9px;
 }
 
 body {
@@ -108,7 +113,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   gap: 10px;
-  background-color: #3b6cff;
+  background-color: #eee;
 }
 body .sitecontainer {
   display: flex;
@@ -147,16 +152,16 @@ body .sitecontainer .blurbifydiv {
   height: auto;
   padding: 30px;
   padding-bottom: 10px;
-  border: 10px solid #160a82;
+  border: var(--border-thickness) solid #160a82;
   border-radius: 30px;
   width: 900px;
-  background-color: #e1e1e1;
+  background-color: white;
 }
-body .sitecontainer .blurbifydiv .gradienttext {
+body .sitecontainer .blurbifydiv .gradient_text {
   background: linear-gradient(90deg, #ff0080, #7928ca, #2afadf);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-weight: 700;
+  font-style: italic;
 }
 body .sitecontainer .blurbifydiv div#pfp_and_username {
   display: flex;
@@ -244,6 +249,10 @@ body .sitecontainer .blurbifydiv div.textcontent {
   padding-bottom: 0px;
   padding-top: 10px;
 }
+body .sitecontainer .blurbifydiv div.textcontent .bottom {
+  display: block;
+  margin-top: 200px;
+}
 body .sitecontainer .blurbifydiv section#imagesection {
   padding: 10px;
   margin-left: 105px;
@@ -274,6 +283,7 @@ body .sitecontainer .blurbifydiv div.iconsdiv {
   margin-top: 15px;
   height: 50px;
   margin-left: 120px;
+  visibility: hidden;
 }
 body .sitecontainer .blurbifydiv div.iconsdiv .fa-heart {
   color: #f10000;
@@ -320,6 +330,7 @@ body .sitecontainer div.flyingimagesdiv .flyingimage {
   max-width: 1000px;
 }
 body .sitecontainer div.flyingimagesdiv #flyingimage1 {
+  visibility: hidden;
   width: 450px;
   height: auto;
   transform: translateY(100px);

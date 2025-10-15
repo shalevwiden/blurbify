@@ -96,6 +96,7 @@
 }
 .flying_class {
   display: block;
+  visibility: visible !important;
   animation: flyingobject 5s normal linear infinite;
 }
 

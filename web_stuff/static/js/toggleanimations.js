@@ -61,8 +61,8 @@ const viewcount = parseInt(views.textContent.replace(/,/g, ""));
 blurbifybutton.addEventListener("click", () => {
   setTimeout(() => {
     console.log("toggling blurbify");
-    blurbifydiv.classList.toggle("blurbify_class");
-    pfpid.classList.toggle("spin_class");
+    // blurbifydiv.classList.toggle("blurbify_class");
+    // pfpid.classList.toggle("spin_class");
     countUp(views, viewcount, 5000);
   }, 2000); // 2000ms = 2 seconds
 });

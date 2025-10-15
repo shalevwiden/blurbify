@@ -2,16 +2,19 @@
 @use "../utils/icons" as *;
 @use "../utils/animations" as *;
 
-$bodybg: #3b6cffff;
-$tweetbackgroundcolor: #e1e1e1ff;
+$bodybg: #eee;
+$tweetbackgroundcolor: #ffffffff;
 $tweet_border_color: #160a82ff;
 $usernamegap: 10px;
 $pfp_size: 100px;
 $blurbify_width: 900px;
 
 $debugborders: false;
-$hideicons: false;
+$hideicons: true;
 
+:root {
+  --border-thickness: 9px;
+}
 body {
   @include bodyStyling;
   background-color: $bodybg;
@@ -48,18 +51,18 @@ body {
 
       padding: 30px;
       padding-bottom: 10px;
-      border: 10px solid $tweet_border_color;
+      border: var(--border-thickness) solid $tweet_border_color;
       border-radius: 30px;
 
       width: $blurbify_width;
 
       background-color: $tweetbackgroundcolor;
 
-      .gradienttext {
+      .gradient_text {
         background: linear-gradient(90deg, #ff0080, #7928ca, #2afadf);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        font-weight: 700;
+        font-style: italic;
       }
       div#pfp_and_username {
         @include flexrow;
@@ -151,6 +154,11 @@ body {
         font-size: 20px;
         padding-bottom: 0px;
         padding-top: 10px;
+
+        .bottom {
+          display: block;
+          margin-top: 200px;
+        }
       }
       section#imagesection {
         padding: 10px;
@@ -238,7 +246,7 @@ body {
         max-width: 1000px;
       }
       #flyingimage1 {
-        // visibility: hidden;
+        visibility: hidden;
         width: 450px;
         height: auto;
         transform: translateY(100px);
