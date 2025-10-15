@@ -36,6 +36,23 @@
     background-color: #fff;
   }
 }
+@keyframes flyingobject {
+  0% {
+    transform: translateX(-900px);
+  }
+  100% {
+    transform: translateX(1200px);
+  }
+}
+.blurbifyanimations {
+  animation: blurbify_animation 5s normal infinite;
+}
+
+.flyinganimations {
+  display: block;
+  animation: flyingobject 4s normal infinite;
+}
+
 body {
   scroll-behavior: smooth;
   display: flex;

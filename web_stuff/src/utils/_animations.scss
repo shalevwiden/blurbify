@@ -23,3 +23,14 @@
     transform: translateX(1200px);
   }
 }
+
+// now define all the actual classes
+
+.blurbifyanimations {
+  animation: blurbify_animation 5s normal infinite;
+}
+
+.flyinganimations {
+  display: block;
+  animation: flyingobject 4s normal infinite;
+}
