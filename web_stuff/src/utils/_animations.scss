@@ -1,0 +1,25 @@
+@keyframes blurbify_animation {
+  0% {
+    border-color: red;
+    background-color: #fff;
+  }
+
+  50% {
+    border-color: blue;
+    background-color: #eee;
+  }
+  100% {
+    border-color: red;
+    background-color: #fff;
+  }
+}
+
+@keyframes flyingobject {
+  0% {
+    transform: translateX(-900px);
+  }
+
+  100% {
+    transform: translateX(1200px);
+  }
+}

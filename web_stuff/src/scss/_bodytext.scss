@@ -1,5 +1,6 @@
 @use "../utils/mixins" as *;
 @use "../utils/icons" as *;
+@use "../utils/animations" as *;
 
 $bodybg: #f9c1b6ff;
 $tweetbackgroundcolor: #ffffffff;
@@ -16,11 +17,31 @@ body {
 
   .sitecontainer {
     @include flexcol();
-    justify-content: center;
+    justify-content: flex-start;
     min-height: 100vh;
     width: 100%;
     border: 3px solid black;
 
+    .buttons {
+      width: 80%;
+      @include flexrow;
+      border: 3px solid black;
+      height: 200px;
+      margin-bottom: 100px;
+
+      button {
+        height: 100px;
+        width: 200px;
+        background-color: rgb(74, 74, 193);
+        color: white;
+        border-radius: 20px;
+
+        &:hover {
+          cursor: pointer;
+          background-color: rgb(41, 41, 91);
+        }
+      }
+    }
     .blurbifydiv {
       height: auto;
 
