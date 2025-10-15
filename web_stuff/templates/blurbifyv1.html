@@ -39,10 +39,12 @@
         <button id="blurbifybutton">Toggle Blurbify Animations</button>
         <button id="Backgroundbutton">Toggle Background Animations</button>
         <button id="flyingbutton">Toggle Flying Object</button>
+        <button id="spin">Spin the Blurb</button>
+        <button id="wildbutton">Wild animations</button>
       </div>
       <div class="blurbifydiv">
         <div id="pfp_and_username">
-          <div class="pfpdiv">
+          <div class="pfpdiv" id="pfpid">
             <img src="../images/pfp1.png" alt="" />
           </div>
           <div class="usernamediv">
@@ -56,7 +58,11 @@
         </div>
 
         <div class="textcontent">
-          <p>Hide icons.</p>
+          <!-- use .gradienttext to add gradienttext -->
+          <p>
+            <span class="gradienttext">Blurbify post part two.</span>
+            <br /><br />What exactly is happening here? Lets break it down.
+          </p>
         </div>
         <!-- <section id="imagesection"> -->
         <!-- <img src="../images/codedemo.png" alt="" id="tweetimage" /> -->
@@ -72,7 +78,7 @@
           <i class="fa-regular fa-heart"></i>
           <div class="statsarea">
             <span class="material-symbols-outlined stats"> bar_chart </span>
-            <span id="count">10,000,000</span>
+            <span id="count">101,525</span>
           </div>
           <div class="righticons">
             <span class="material-symbols-rounded bookmark"> bookmark </span>
@@ -81,7 +87,14 @@
         </div>
       </div>
 
-      <img src="" alt="FLYING" id="flyingimage1" class="flyingimage" />
+      <div class="flyingimagesdiv">
+        <img
+          src="../images/flyingimages/airbus-removebg-preview.png"
+          alt="FLYING"
+          id="flyingimage1"
+          class="flyingimage"
+        />
+      </div>
     </div>
     <script src="../static/js/toggleanimations.js"></script>
   </body>
