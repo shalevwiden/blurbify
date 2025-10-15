@@ -10,6 +10,7 @@ $pfp_size: 100px;
 $blurbify_width: 900px;
 
 $debugborders: false;
+$hideicons: true;
 
 body {
   @include bodyStyling;
@@ -184,10 +185,30 @@ body {
         height: 50px;
 
         margin-left: $usernamegap + $pfp_size + 10px;
-
-        i {
-          font-size: 25px;
+        @if $hideicons {
+          visibility: hidden;
         }
+
+        .fa-heart {
+          color: #f10000ff;
+        }
+        .stats {
+          font-variation-settings: "FILL" 0, "wght" 700, "GRAD" 0, "opsz" 24;
+          font-size: 27px;
+        }
+
+        .bookmark {
+          font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 40;
+          font-size: 37px;
+
+          margin-top: 4px;
+        }
+        .share {
+          font-variation-settings: "FILL" 0, "wght" 500, "GRAD" 0, "opsz" 20;
+          font-size: 37px;
+          margin-top: -1px;
+        }
+
         .statsarea {
           @include flexrow;
           gap: 5px;

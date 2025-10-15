@@ -23,3 +23,12 @@ So now I'm thinking to use HTML and CSS fully for the project which does make mo
 
 New plan is use an automation to open up the browser and take a bunch of screenshots.
 I wonder what the lag time will be tho...
+
+### Oct 14, 2025
+
+An HTML and CSS version has finally been completed lets goo
+
+In the future:
+
+- Make it a Jinja template
+- have it for different channels of mine, like Motionline Animations

@@ -4,24 +4,6 @@
   transition: all 0.3s ease;
 }
 
-.iconsdiv .fa-heart {
-  color: #f10000;
-}
-.iconsdiv .stats {
-  font-variation-settings: "FILL" 0, "wght" 700, "GRAD" 0, "opsz" 24;
-  font-size: 27px;
-}
-.iconsdiv .bookmark {
-  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 40;
-  font-size: 37px;
-  margin-top: 4px;
-}
-.iconsdiv .share {
-  font-variation-settings: "FILL" 0, "wght" 500, "GRAD" 0, "opsz" 20;
-  font-size: 37px;
-  margin-top: -1px;
-}
-
 @keyframes blurbify_animation {
   0% {
     border-color: red;
@@ -36,6 +18,20 @@
     background-color: #fff;
   }
 }
+@keyframes background_animations {
+  0% {
+    background-color: rgb(24, 142, 24);
+  }
+  50% {
+    background-color: #0e94e8;
+  }
+  90% {
+    background-color: rgb(227, 77, 18);
+  }
+  100% {
+    background-color: rgb(24, 142, 24);
+  }
+}
 @keyframes flyingobject {
   0% {
     transform: translateX(-900px);
@@ -44,11 +40,15 @@
     transform: translateX(1200px);
   }
 }
-.blurbifyanimations {
+.blurbify_class {
   animation: blurbify_animation 5s normal infinite;
 }
 
-.flyinganimations {
+.background_class {
+  animation: background_animations 5s normal infinite;
+}
+
+.flying_class {
   display: block;
   animation: flyingobject 4s normal infinite;
 }
@@ -226,9 +226,24 @@ body .sitecontainer .blurbifydiv div.iconsdiv {
   margin-top: 15px;
   height: 50px;
   margin-left: 120px;
+  visibility: hidden;
 }
-body .sitecontainer .blurbifydiv div.iconsdiv i {
-  font-size: 25px;
+body .sitecontainer .blurbifydiv div.iconsdiv .fa-heart {
+  color: #f10000;
+}
+body .sitecontainer .blurbifydiv div.iconsdiv .stats {
+  font-variation-settings: "FILL" 0, "wght" 700, "GRAD" 0, "opsz" 24;
+  font-size: 27px;
+}
+body .sitecontainer .blurbifydiv div.iconsdiv .bookmark {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 40;
+  font-size: 37px;
+  margin-top: 4px;
+}
+body .sitecontainer .blurbifydiv div.iconsdiv .share {
+  font-variation-settings: "FILL" 0, "wght" 500, "GRAD" 0, "opsz" 20;
+  font-size: 37px;
+  margin-top: -1px;
 }
 body .sitecontainer .blurbifydiv div.iconsdiv .statsarea {
   display: flex;

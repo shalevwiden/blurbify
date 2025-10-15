@@ -14,6 +14,22 @@
   }
 }
 
+@keyframes background_animations {
+  0% {
+    background-color: rgba(24, 142, 24, 1);
+  }
+
+  50% {
+    background-color: #0e94e8ff;
+  }
+  90% {
+    background-color: rgb(227, 77, 18);
+  }
+  100% {
+    background-color: rgba(24, 142, 24, 1);
+  }
+}
+
 @keyframes flyingobject {
   0% {
     transform: translateX(-900px);
@@ -26,11 +42,14 @@
 
 // now define all the actual classes
 
-.blurbifyanimations {
+.blurbify_class {
   animation: blurbify_animation 5s normal infinite;
 }
 
-.flyinganimations {
+.background_class {
+  animation: background_animations 5s normal infinite;
+}
+.flying_class {
   display: block;
   animation: flyingobject 4s normal infinite;
 }
