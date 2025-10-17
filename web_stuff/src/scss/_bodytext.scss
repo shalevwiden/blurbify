@@ -57,6 +57,7 @@ body {
       width: $blurbify_width;
 
       background-color: $tweetbackgroundcolor;
+      margin-bottom: 200px;
 
       .gradient_text {
         background: linear-gradient(90deg, #ff0080, #7928ca, #2afadf);
@@ -89,6 +90,7 @@ body {
           z-index: 1;
           @include flexcol;
           img {
+            margin-bottom: -6px;
             width: 135%; /* scale image to parent width */
             aspect-ratio: 1 / 1;
           }

@@ -156,6 +156,7 @@ body .sitecontainer .blurbifydiv {
   border-radius: 30px;
   width: 900px;
   background-color: white;
+  margin-bottom: 200px;
 }
 body .sitecontainer .blurbifydiv .gradient_text {
   background: linear-gradient(90deg, #ff0080, #7928ca, #2afadf);
@@ -190,6 +191,7 @@ body .sitecontainer .blurbifydiv div#pfp_and_username .pfpdiv {
   gap: 20px;
 }
 body .sitecontainer .blurbifydiv div#pfp_and_username .pfpdiv img {
+  margin-bottom: -6px;
   width: 135%; /* scale image to parent width */
   aspect-ratio: 1/1;
 }
