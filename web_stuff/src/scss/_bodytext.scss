@@ -27,10 +27,11 @@ body {
     border: 3px solid black;
 
     .buttons {
-      width: 80%;
+      width: 90%;
       @include flexrow;
       border: 3px solid black;
-      height: 200px;
+      height: auto;
+      padding: 50px;
       margin-bottom: 400px;
 
       button {
@@ -43,6 +44,25 @@ body {
         &:hover {
           cursor: pointer;
           background-color: rgb(41, 41, 91);
+        }
+      }
+
+      @media (max-width: 1050px) {
+        // this is good
+        flex-direction: column;
+        button {
+          height: 100px;
+          width: 70%;
+          background-color: rgba(226, 47, 20, 1);
+          color: white;
+          border-radius: 20px;
+          font-size: 20px;
+          font-weight: bold;
+
+          &:hover {
+            cursor: pointer;
+            background-color: rgba(255, 192, 116, 1);
+          }
         }
       }
     }
@@ -58,10 +78,6 @@ body {
 
       background-color: $tweetbackgroundcolor;
       margin-bottom: 200px;
-
-      @media (max-width: 1050px) {
-        width: 60vw;
-      }
 
       .gradient_text {
         background: linear-gradient(90deg, #ff0080, #7928ca, #2afadf);
@@ -92,6 +108,7 @@ body {
 
           overflow: hidden;
           z-index: 1;
+          flex-shrink: 0;
           @include flexcol;
           img {
             margin-bottom: 10px;
@@ -247,7 +264,155 @@ body {
           margin-right: 30px;
         }
       }
+
+      @media (max-width: 1050px) {
+        width: 60vw;
+
+        div#pfp_and_username {
+          @include flexrow;
+
+          align-items: flex-start;
+
+          @if $debugborders {
+            border: 3px solid rgb(20, 101, 20);
+          } @else {
+            border: 3px solid transparent;
+          }
+          justify-content: flex-start;
+          padding-right: 20px;
+          height: 100px;
+          gap: 1px;
+
+          .pfpdiv {
+            width: 70px;
+            aspect-ratio: 1 / 1;
+            border: 5px solid black;
+            border-radius: 50%;
+
+            overflow: hidden;
+            z-index: 1;
+            flex-shrink: 0;
+            @include flexcol;
+            img {
+              margin-bottom: 10px;
+              width: 135%; /* scale image to parent width */
+              aspect-ratio: 1 / 1;
+            }
+          }
+          .usernamediv {
+            height: 100%;
+            width: 400px;
+
+            @if $debugborders {
+              @include border(#f02c7eff);
+            } @else {
+              @include border(transparent);
+            }
+
+            @include flexrow;
+            justify-content: flex-start;
+
+            align-items: flex-start;
+
+            div.align_them_div {
+              @include flexrow;
+              justify-content: flex-start;
+
+              align-items: flex-end;
+
+              @if $debugborders {
+                @include border(pink);
+              } @else {
+                @include border(transparent);
+              }
+              width: 100%;
+              height: 40%;
+
+              padding: 0 11px;
+              column-gap: $usernamegap;
+
+              #name {
+                font-weight: bold;
+                font-size: 23px;
+                @include flexrow;
+                gap: 3px;
+
+                img#verified {
+                  width: 21px;
+                  aspect-ratio: 1 / 1;
+                  // this is alright but not optimal
+                  // vertical-align: middle;
+                  position: relative;
+                  top: 1px;
+                }
+              }
+              #username {
+                color: grey;
+                font-size: 19px;
+                margin-bottom: 2px;
+              }
+            }
+          }
+        }
+        div.textcontent {
+          padding: 30px;
+          // make text content to go to a new place
+          padding-left: 0px;
+
+          margin-top: -43px;
+          font-size: 28px;
+          padding-bottom: 0px;
+          padding-top: 0px;
+
+          .bottom {
+            display: block;
+            margin-top: 200px;
+          }
+        }
+        section#imagesection {
+          padding: 10px;
+
+          margin-left: $usernamegap + $pfp_size - 5px;
+
+          // this uses my mixin and if else logic
+          @if $debugborders {
+            @include border(purple);
+          } @else {
+            @include border(transparent);
+          }
+          // @include border(rgb(74, 192, 228));
+
+          width: 80%;
+          height: auto;
+
+          img#tweetimage {
+            width: 100%;
+            height: auto;
+            border-radius: 25px;
+          }
+          video#tweetvid {
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+          }
+        }
+        div.iconsdiv {
+          @include flexrow;
+          @if $debugborders {
+            @include border(rgb(255, 0, 0));
+          } @else {
+            @include border(transparent);
+          }
+          justify-content: space-between;
+
+          margin-top: 15px;
+          height: 50px;
+
+          margin-left: $usernamegap + $pfp_size + 10px;
+        }
+      }
     }
+
     div.flyingimagesdiv {
       margin-top: 40px;
       .flyingimage {
