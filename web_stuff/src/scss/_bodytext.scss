@@ -9,7 +9,7 @@ $usernamegap: 10px;
 $pfp_size: 100px;
 $blurbify_width: 900px;
 
-$debugborders: false;
+$debugborders: true;
 $hideicons: true;
 
 :root {
@@ -59,6 +59,10 @@ body {
       background-color: $tweetbackgroundcolor;
       margin-bottom: 200px;
 
+      @media (max-width: 1050px) {
+        width: 60vw;
+      }
+
       .gradient_text {
         background: linear-gradient(90deg, #ff0080, #7928ca, #2afadf);
         -webkit-background-clip: text;
@@ -83,14 +87,14 @@ body {
         .pfpdiv {
           width: $pfp_size;
           aspect-ratio: 1 / 1;
-          border: 0px solid black;
+          border: 5px solid black;
           border-radius: 50%;
 
           overflow: hidden;
           z-index: 1;
           @include flexcol;
           img {
-            margin-bottom: -6px;
+            margin-bottom: 10px;
             width: 135%; /* scale image to parent width */
             aspect-ratio: 1 / 1;
           }
@@ -129,7 +133,7 @@ body {
 
             #name {
               font-weight: bold;
-              font-size: 25px;
+              font-size: 35px;
               @include flexrow;
               gap: 3px;
 
@@ -138,11 +142,13 @@ body {
                 aspect-ratio: 1 / 1;
                 // this is alright but not optimal
                 // vertical-align: middle;
+                position: relative;
+                top: 1px;
               }
             }
             #username {
               color: grey;
-              font-size: 20px;
+              font-size: 28px;
               margin-bottom: 2px;
             }
           }
@@ -153,7 +159,7 @@ body {
         padding-left: $usernamegap + $pfp_size + 18px;
 
         margin-top: -67px;
-        font-size: 20px;
+        font-size: 28px;
         padding-bottom: 0px;
         padding-top: 10px;
 
