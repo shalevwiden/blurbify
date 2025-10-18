@@ -9,9 +9,12 @@ $usernamegap: 10px;
 $pfp_size: 100px;
 $blurbify_width: 900px;
 
-$debugborders: true;
+$debugborders: false;
 $hideicons: true;
 
+* {
+  box-sizing: border-box;
+}
 :root {
   --border-thickness: 9px;
 }
@@ -103,7 +106,7 @@ body {
         .pfpdiv {
           width: $pfp_size;
           aspect-ratio: 1 / 1;
-          border: 5px solid black;
+          border: 0px solid black;
           border-radius: 50%;
 
           overflow: hidden;
@@ -145,7 +148,8 @@ body {
             width: 100%;
             height: 40%;
 
-            padding: 0 11px;
+            padding: 0 4px;
+            padding-left: 10px;
             column-gap: $usernamegap;
 
             #name {
@@ -155,7 +159,7 @@ body {
               gap: 3px;
 
               img#verified {
-                width: 21px;
+                width: 27px;
                 aspect-ratio: 1 / 1;
                 // this is alright but not optimal
                 // vertical-align: middle;
@@ -173,7 +177,7 @@ body {
       }
       div.textcontent {
         padding: 30px;
-        padding-left: $usernamegap + $pfp_size + 18px;
+        padding-left: $usernamegap + $pfp_size + 10px;
 
         margin-top: -67px;
         font-size: 28px;
@@ -266,7 +270,8 @@ body {
       }
 
       @media (max-width: 1050px) {
-        width: 60vw;
+        width: 90%;
+        border: 3px solid $tweet_border_color;
 
         div#pfp_and_username {
           @include flexrow;
@@ -286,7 +291,7 @@ body {
           .pfpdiv {
             width: 70px;
             aspect-ratio: 1 / 1;
-            border: 5px solid black;
+            border: 0px solid black;
             border-radius: 50%;
 
             overflow: hidden;
@@ -328,8 +333,10 @@ body {
               width: 100%;
               height: 40%;
 
-              padding: 0 11px;
-              column-gap: $usernamegap;
+              padding: 0 4px;
+              // make these smaller if I need to
+              padding-left: 5px;
+              column-gap: 7px;
 
               #name {
                 font-weight: bold;
@@ -372,7 +379,8 @@ body {
         section#imagesection {
           padding: 10px;
 
-          margin-left: $usernamegap + $pfp_size - 5px;
+          margin-left: 0;
+          padding-left: 1px;
 
           // this uses my mixin and if else logic
           @if $debugborders {
@@ -382,13 +390,15 @@ body {
           }
           // @include border(rgb(74, 192, 228));
 
-          width: 80%;
+          // for the 400-1050 one
+          width: 100%;
           height: auto;
 
           img#tweetimage {
             width: 100%;
             height: auto;
             border-radius: 25px;
+            border: 3px solid green;
           }
           video#tweetvid {
             width: 100%;
@@ -409,6 +419,88 @@ body {
           height: 50px;
 
           margin-left: $usernamegap + $pfp_size + 10px;
+        }
+      }
+      @media (max-width: 400px) {
+        width: 90%;
+        border: 3px solid $tweet_border_color;
+
+        div#pfp_and_username {
+          @include flexrow;
+
+          align-items: flex-start;
+
+          @if $debugborders {
+            border: 3px solid rgb(20, 101, 20);
+          } @else {
+            border: 3px solid transparent;
+          }
+          justify-content: flex-start;
+          padding-right: 20px;
+          height: 100px;
+          gap: 1px;
+
+          .pfpdiv {
+            width: 70px;
+            aspect-ratio: 1 / 1;
+            border: 0px solid black;
+            border-radius: 50%;
+
+            overflow: hidden;
+            z-index: 1;
+            flex-shrink: 0;
+            @include flexcol;
+            img {
+              margin-bottom: 10px;
+              width: 135%; /* scale image to parent width */
+              aspect-ratio: 1 / 1;
+            }
+          }
+          .usernamediv {
+            height: 100%;
+            width: 400px;
+
+            @if $debugborders {
+              @include border(#f02c7eff);
+            } @else {
+              @include border(transparent);
+            }
+
+            @include flexrow;
+            justify-content: flex-start;
+
+            align-items: flex-start;
+
+            div.align_them_div {
+              @include flexcol;
+              justify-content: flex-start;
+
+              align-items: flex-start;
+
+              row-gap: 7px;
+
+              #name {
+                font-weight: bold;
+                font-size: 23px;
+                @include flexrow;
+                gap: 3px;
+
+                img#verified {
+                  width: 17px;
+                  aspect-ratio: 1 / 1;
+                  // this is alright but not optimal
+                  // vertical-align: middle;
+                  position: relative;
+                  top: 1px;
+                }
+              }
+              #username {
+                color: grey;
+                font-size: 19px;
+                margin-bottom: 2px;
+              }
+            }
+          }
         }
       }
     }
